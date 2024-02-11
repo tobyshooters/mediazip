@@ -1,0 +1,21 @@
+{
+    "metadata": {
+      "title": "Carnival (Taylor, Bakhtin)",
+      "tag": "rabelais",
+      "description": "This is some arbitrary text I'm concocting"
+    },
+    "images": {
+        "IMG_0126.compressed.JPG": {
+            "note": "testing"
+        },
+        "IMG_0127.compressed.JPG": {
+            "note": "testing"
+        },
+        "IMG_0128.compressed.JPG": {
+            "note": "testing"
+        },
+        "IMG_0129.compressed.JPG": {
+            "note": "testing"
+        }
+    }
+}
