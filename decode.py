@@ -1,20 +1,26 @@
 import os
-import sys
+import argparse
 import bs4
 import json
 import base64
 
 data = {}
 
-target = sys.argv[1].split(".")[0] + "-decoded"
+parser = argparse.ArgumentParser(prog="Decode media")
+parser.add_argument("filename")
+
+args = parser.parse_args()
+filename = args.filename
+
+target = filename.split(".")[0] + "-decoded"
 if not os.path.exists(target):
     os.mkdir(target)
 
 
-with open(sys.argv[1], "r") as f:
+with open(filename, "r") as f:
     s = f.read()
 
-html = bs4.BeautifulSoup(s, 'lxml') 
+html = bs4.BeautifulSoup(s, 'lxml')
 for node in html.body.children:
     if isinstance(node, bs4.Tag) and node.get("id"):
         path = node["id"].split("/")
